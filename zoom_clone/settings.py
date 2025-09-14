@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-)2()t9r%8%6e$&xtb11e$@%u_y*lbl=0pp&ny1i9l(4%pr6*e$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['your-app.onrender.com']
+ALLOWED_HOSTS = ['*']  # Or your render app URL
+
 
 
 # Application definition
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 
