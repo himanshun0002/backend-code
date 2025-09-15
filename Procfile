@@ -1,1 +1,1 @@
-web: gunicorn zoom_clone.wsgi:application --bind 0.0.0.0:$PORT
+web: daphne -p $PORT -b 0.0.0.0 zoom_clone.asgi:application
